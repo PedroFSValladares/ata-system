@@ -26,6 +26,7 @@ function doSomething(e, key){
 
   const btnExclui = $('.btnExclui');
 
+  /* Responsável por excluir o item */
   exclusaoItens(btnExclui);
 }
 
