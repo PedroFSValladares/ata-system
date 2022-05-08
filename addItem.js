@@ -43,8 +43,8 @@ function envioDeDados(input, lista) {
 
     for(i = 0; i < arrayLenght; i++){
         $('<div class="input-group mb-2">'
-            +'<input type="text" class="form-control" value="'+capturado+'">'
-            +'<button class="btn btn-outline-danger btnExclui" type="button">Excluir</button>'
+            +'<input type="text" class="form-control" value="'+capturado+'" required>'
+            +'<button class="btn btn-outline-danger btnExclui" type="button"><i class="fa-solid fa-x mx-1"></i></button>'
         +'</div>'
         ).appendTo(lista);
     }

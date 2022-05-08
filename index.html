@@ -12,6 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/cf4fb9e680.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./jquery.js"></script>
 
   </head>
@@ -32,7 +33,6 @@
                     name="campo"
                     class="form-control campo"
                     placeholder="Ex: Elaboração para plano de ensino..."
-                    required
                   />
                     <div class="invalid-tooltip">
                         O campo não pode estar vazio!
@@ -41,7 +41,7 @@
                 
                 <div class="mb-3 d-flex justify-content-end">
                   <button class="btn btn-success botao">
-                    Novo Item
+                    Add
                   </button>
                 </div>
                 <div class="mb-3 lista">
@@ -75,7 +75,6 @@
                   name="campo"
                   class="form-control campo"
                   placeholder="Ex: Professor..."
-                  required
                   />
                   <div class="invalid-tooltip">
                     O campo não pode estar vazio!
@@ -84,10 +83,15 @@
               
               <div class="mb-3 d-flex justify-content-end">
                 <button class="btn btn-success botao">
-                  Novo Membro
+                  <i class="fa-solid fa-user-plus"></i>
                 </button>
               </div>
               <div class="mb-3 lista">
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-end">
+                <input class="btn btn-primary" type="submit" value="Concluir">
               </div>
             </div>
             </form>
