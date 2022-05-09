@@ -1,5 +1,6 @@
 let botoes = $('.botao');
 let inputs = $('.campo');
+let listas = $('.lista');
 var capturado = "";
 
 $(inputs[1]).keypress(function (e) { 
@@ -19,7 +20,7 @@ function doSomething(e, key){
   e.preventDefault();
 
   const input = inputs[key];
-  const lista = $('.lista')[key];
+  const lista = listas[key];
 
   /* Responsável por capturar o dado */
   envioDeDados(input, lista);
@@ -28,10 +29,11 @@ function doSomething(e, key){
 
   /* Responsável por excluir o item */
   exclusaoItens(btnExclui);
+
 }
 
 function envioDeDados(input, lista) { 
-  capturado= input.value;
+  capturado = input.value;
 
   /* Verifica se dados podem ser adicionados */
   if(!capturado){
@@ -64,6 +66,18 @@ function exclusaoItens(btnExclui) {
   });
 }
 
+$('.botaoEnviar').click(function (e) { 
+  e.preventDefault();
+  
+  if(listas[0].childElementCount > 0 && listas[1].childElementCount > 0){
+    $(".botaoEnviar").unbind('click').click();
+  }else if(listas[0].childElementCount == 0){
+    alert("Insira itens na pauta!");
+  }else if(listas[1].childElementCount == 0){
+    alert("Insira membros para a assinatura!");
+  }
+});
+
 $.each(inputs, function (i, v) { 
   $(v).keyup(function () { 
     if($(v).hasClass("is-invalid")){
@@ -71,3 +85,4 @@ $.each(inputs, function (i, v) {
     }
   });
 });
+
