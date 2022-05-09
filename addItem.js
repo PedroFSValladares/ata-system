@@ -79,10 +79,17 @@ $('.botaoEnviar').click(function (e) {
 });
 
 $.each(inputs, function (i, v) { 
-  $(v).keyup(function () { 
+  $(v).click(function () { 
     if($(v).hasClass("is-invalid")){
       $(v).removeClass("is-invalid");
     }
   });
+  $(v).keyup(function (e) { 
+    const campoInput = e.currentTarget;
+    var wordsV = campoInput.value;
+    if(wordsV.length > 1 && $(campoInput).hasClass("is-invalid")){
+      $(campoInput).removeClass("is-invalid");
+    }
+  }); 
 });
 
