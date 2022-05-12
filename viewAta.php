@@ -1,8 +1,10 @@
 <?php
+
 echo "<pre>";
-print_r($_POST['arr']);
+var_dump($_POST);
 echo "</pre>";
 exit;
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,7 +25,7 @@ exit;
         <div class="conteudo">
           <img src="./header.PNG" alt="Header" width="100%">
           <div class="meio">
-            <div class="container">
+            <div class="container aqui">
             </div>
           </div>
           <img src="./footer.PNG" alt="Footer" width="100%">
