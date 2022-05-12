@@ -43,12 +43,24 @@ function envioDeDados(input, lista) {
     var arrayItems = ['div'];
     arrayLenght = arrayItems.length;
 
-    for(i = 0; i < arrayLenght; i++){
+    if(input == inputs[0]){
+      for(i = 0; i < arrayLenght; i++){
+        let count = lista.childElementCount;
         $('<div class="input-group mb-2">'
-            +'<input type="text" class="form-control" value="'+capturado+'" required>'
+            +'<input type="text" class="form-control" name="input'+count+'" value="'+capturado+'" required>'
             +'<button class="btn btn-outline-danger btnExclui" type="button">Excluir</button>'
         +'</div>'
         ).appendTo(lista);
+      }
+    }else if(input == inputs[1]){
+      let count = lista.childElementCount;
+      for(i = 0; i < arrayLenght; i++){
+        $('<div class="input-group mb-2">'
+            +'<input type="text" class="form-control" name="ass'+count+'" value="'+capturado+'" required>'
+            +'<button class="btn btn-outline-danger btnExclui" type="button">Excluir</button>'
+        +'</div>'
+        ).appendTo(lista);
+      }
     }
 
     input.value = "";
@@ -69,12 +81,10 @@ function exclusaoItens(btnExclui) {
 $('.botaoEnviar').click(function (e) { 
   e.preventDefault();
   
-  if(listas[0].childElementCount > 0 && listas[1].childElementCount > 0){
+  if(listas[0].childElementCount > 0){
     $(".botaoEnviar").unbind('click').click();
   }else if(listas[0].childElementCount == 0){
     alert("Insira itens na pauta!");
-  }else if(listas[1].childElementCount == 0){
-    alert("Insira membros para a assinatura!");
   }
 });
 

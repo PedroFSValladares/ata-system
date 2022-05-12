@@ -1,3 +1,9 @@
+<?php
+echo "<pre>";
+print_r($_POST['arr']);
+echo "</pre>";
+exit;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
