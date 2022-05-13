@@ -35,7 +35,9 @@
             <a class="nav-link" href="#">Salvar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Baixar</a>
+            <form action="./teste.php" method="post">
+              <input type="submit" class="nav-link active" value="Baixar">
+            </form>
           </li>
         </ul>
       </div>
