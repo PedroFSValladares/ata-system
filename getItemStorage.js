@@ -1,12 +1,10 @@
 $(document).ready(function () {
-
-
-  const inputs = retornaDados([], "input", []);
-  const assinaturas = retornaDados([], "ass", []);
-  const detalhes = localStorage.getItem("detalhes").split(" ");
+  const inputs = retornaDados([], "input");
+  const assinaturas = retornaDados([], "ass");
+  const detalhes = console.log(localStorage.getItem("detalhes").split(" "));
 });
 
-function retornaDados([], tipoKey, dataFilter){
+function retornaDados([], tipoKey){
   var arr = [];
   var dataFilter;
 
