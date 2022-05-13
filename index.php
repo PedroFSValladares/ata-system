@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  <div id="resultado">
+  </div>
   <div class="container">
     <div class="row mt-5">
       <div class="col-lg-6 col-sm-12 mb-sm-3">
@@ -43,7 +45,7 @@
               </div>
               <div class="card-footer">
                 <div class="d-flex justify-content-end">
-                  <input class="btn btn-primary botaoEnviar" type="submit" value="Continuar">
+                  <input class="btn btn-primary botaoContinuar" type="submit" value="Continuar">
                 </div>
               </div>
             </form>
@@ -56,7 +58,7 @@
             <h3 class="text-center">Assinaturas</h3>
           </div>
           <div class="card-body">
-            <form id="form2" action="./viewAta.php">
+            <form id="form2">
               <div class="mb-3 position-relative">
                 <label for="campo" class="form-label">Membros da Ata</label>
                 <input type="text" class="form-control campo" placeholder="Ex: Professor..." disabled>
@@ -73,7 +75,7 @@
               </div>
               <div class="card-footer">
                 <div class="d-flex justify-content-end">
-                  <input class="btn btn-primary" id="visualizar" type="submit" value="Visualizar Documento" disabled>
+                  <input class="btn btn-primary" id="visualizar" type="submit" value="Baixar" disabled>
                 </div>
               </div>
             </form>

@@ -1,11 +1,3 @@
-<?php
-
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-exit;
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,8 +9,14 @@ exit;
 </head>
 <link rel="stylesheet" href="./view.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+<script type="text/javascript" src="./jquery.js"></script>
 
 <body>
+  <div id="resultado">
+  </div>
+  <p id="teste">
+  <p></p>
+  </p>
   <div class="container">
     <div class="row mt-5">
       <div class="col-lg-6 col-sm-12 mb-sm-3">
@@ -39,17 +37,12 @@ exit;
           <li class="nav-item">
             <a class="nav-link active" href="#">Baixar</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Disabled</a>
-          </li>
         </ul>
       </div>
     </div>
   </div>
 
+  <script type="text/javascript" src="./getItemStorage.js"></script>
 </body>
 
 </html>

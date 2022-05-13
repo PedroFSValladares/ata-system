@@ -30,20 +30,28 @@ $("#form2").on("submit", (e) => {
 
   const dataComObjetos = myArray.map(objectificar);
 
-  const vUrl = $("#form2").attr( "action" );
-
 /*   dataComObjetos.forEach((objeto) => {
     for(var chave in objeto){
       console.log("Chave: " + chave + "; Valor: " + objeto[chave]);
     }
   }); */
 
-  $.ajax({
-    type: "POST",
-    url: vUrl,
-    data: dataComObjetos
-  }).done((data) => {
-    console.log(data);
-  });
+  var itens = JSON.stringify(dataComObjetos);
+  var parsed = JSON.parse(itens);
 
+/*   console.log(parsed); */
+
+  if(localStorage.token !== null) {
+    localStorage.clear();
+  }
+
+  parsed.forEach((objeto) => {
+    for(var chave in objeto){
+/*       console.log("Chave: " + chave + "; Valor: " + objeto[chave]); */
+      localStorage.setItem(chave, objeto[chave]);
+    }
+  });
+  
+  window.location.href = "./viewAta.php";
 });
+

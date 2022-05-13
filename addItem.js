@@ -78,13 +78,23 @@ function exclusaoItens(btnExclui) {
   });
 }
 
-$('.botaoEnviar').click(function (e) { 
+$('.botaoContinuar').click(function (e) { 
   e.preventDefault();
   
   if(listas[0].childElementCount > 0){
-    $(".botaoEnviar").unbind('click').click();
+    $(".botaoContinuar").unbind('click').click();
   }else if(listas[0].childElementCount == 0){
     alert("Insira itens na pauta!");
+  }
+});
+
+$('#visualizar').click(function (e) { 
+  e.preventDefault();
+  
+  if(listas[1].childElementCount > 0){
+    $("#visualizar").unbind('click').click();
+  }else if(listas[1].childElementCount == 0){
+    alert("Insira membros para assinar!");
   }
 });
 
